@@ -1,0 +1,46 @@
+{
+  "name": "cube-ui-tester",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./npm-scripts/_prompt.js"
+  },
+  "bin": {
+    "vue-cli-service": "./node_modules/.bin/vue-cli-service"
+  },
+  "dependencies": {
+    "cube-ui": "~1.12.1",
+    "vue": "^2.5.22",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "inquirer": "^6.2.2",
+    "shelljs": "^0.8.3",
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "qiniu": "^7.2.1",
+    "qiniu-webpack-plugin": "^0.4.2",
+    "vue-cli-plugin-cube-ui": "^0.2.4",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "transformModules": {
+    "cube-ui": {
+      "transform": "cube-ui/lib/${member}",
+      "kebabCase": true,
+      "style": {
+        "ignore": [
+          "create-api",
+          "better-scroll",
+          "locale"
+        ]
+      }
+    }
+  }
+}
